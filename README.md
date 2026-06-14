@@ -6,18 +6,28 @@ A small QA-oriented Python project demonstrating automated testing with pytest.
 
 The purpose of this project is to demonstrate:
 
-- Python fundamentals
-- Test design
-- Automated testing with pytest
-- Parameterized test cases
-- Basic QA engineering practices
+* Writing simple Python functions
+* Creating automated tests with pytest
+* Using parameterized test cases
+* Handling valid and invalid inputs
+* Applying basic QA testing principles
 
 ## Technologies
 
-- Python
-- Pytest
-- Git
-- GitHub
+* Python 3
+* Pytest
+* Git
+* GitHub
+
+## Project Description
+
+This project contains a simple function that classifies a day number as:
+
+* Workday (`Arbeitstag`)
+* Weekend (`Wochenende`)
+* Invalid weekday (`Ungültiger Wochentag`)
+
+The functionality is covered by automated tests written with pytest.
 
 ## Project Structure
 
@@ -31,21 +41,43 @@ tests/
 
 ## Running Tests
 
+Install dependencies:
+
 ```bash
-pytest
+pip install -r requirements.txt
+```
+
+Run all tests:
+
+```bash
+python -m pytest
 ```
 
 ## Test Coverage
 
-The tests verify:
+The automated tests verify:
 
-- Valid weekdays (1–5)
-- Weekend days (6–7)
-- Invalid inputs (0, 8, -1, 100)
+* Valid weekdays (1–5)
+* Weekend days (6–7)
+* Invalid inputs (0, 8, -1, 100)
 
-## Test Result
+A total of 11 test cases are executed automatically.
 
-All tests passed successfully.
+## Example
 
-```bash
-11 passed in 0.03s
+```python
+get_day_type(1)
+# Arbeitstag
+
+get_day_type(6)
+# Wochenende
+
+get_day_type(100)
+# Ungültiger Wochentag
+```
+
+## Author
+
+Albert Lalazaryan
+
+GitHub: https://github.com/lalazaryanqa
